@@ -1,0 +1,67 @@
+name: ANTICS support request
+description: Report a bug, request account help, or flag a privacy or safety issue.
+title: "[Support]: "
+labels:
+  - support
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting this. This request is public. Do not include passwords, sign-in codes, authentication tokens, private email addresses, or other sensitive information.
+  - type: dropdown
+    id: topic
+    attributes:
+      label: Topic
+      options:
+        - App or game bug
+        - Sign-in or sync
+        - Privacy or account deletion
+        - Safety or abuse
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: ANTICS version
+      placeholder: "1.0.0 (2)"
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: iPhone and iOS version
+      placeholder: "iPhone 17 Pro, iOS 26.1"
+    validations:
+      required: true
+  - type: dropdown
+    id: account
+    attributes:
+      label: Account state
+      options:
+        - Guest / not signed in
+        - Signed in with Apple
+        - Signed in with Google
+        - Prefer not to say
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include the game or screen and the last action you took. Do not include private credentials or email addresses.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Public report confirmation
+      options:
+        - label: I understand this report is public and contains no password, sign-in code, token, private email address, or other sensitive information.
+          required: true
